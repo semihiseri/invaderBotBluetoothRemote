@@ -1,24 +1,15 @@
-from bluetooth import *
+import os
+import serial
 
-devAddress = "" # fill the device address here. 
-# run "hcitool dev" to get the device address on the raspberry pi
+rfcommNr = 1
 
-if devAddress == "":
-    print "edit the file and configure the device address!"
-    quit()
+ser = serial.Serial("/dev/rfcomm%s" %rfcommNr)
+print "connected"
 
-# Create the client socket
-client_socket=BluetoothSocket( RFCOMM )
-
-client_socket.connect((devAddress, 3))
-
-while True:
-    try:
-        data = str(raw_input())
-        client_socket.send(data)
-    except:
-        break
+while True: 
+    data = str(raw_input())
+    ser.write(data)
 
 print "Finished"
 
-client_socket.close()
+ser.close()

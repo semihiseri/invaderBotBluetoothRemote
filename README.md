@@ -1,7 +1,17 @@
 # invaderBotBluetoothRemote
 This repo provides remote controlling solution over bluetooth SPP. You can configure raspberries as servers, and controller laptops as clients.
 
-Run relevant setup file on each side and then run the actual scripts
+## Raspberry Pi
+* run setup-server.sh
+* run "python server.py"
+
+## Laptop
+* run setup-client.sh
+* run "sudo rfcomm connect nr bda 3" where nr is a number (you'll need this) and bda is your bluetooth device address (run "hcitool dev" on raspberry pi to get this). Keep this running.
+* edit rfcommNr in client.py according to 'nr' above
+* run python client.py
+
+Run relevant setup file on each side and then run he actual scripts
 
 # What to do if you are getting the following error:
 Traceback (most recent call last):
