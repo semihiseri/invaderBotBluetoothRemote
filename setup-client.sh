@@ -37,7 +37,6 @@ sleep 1
 echo 'Longcat is long'
 sleep 1
 
-sudo apt-get install pi-bluetooth
 sudo apt-get install bluetooth bluez
 sudo apt-get install bluez python-bluez
 
