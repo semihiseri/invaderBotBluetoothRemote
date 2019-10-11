@@ -1,6 +1,7 @@
 from bluetooth import *
 
 devAddress = "" # fill the device address here. 
+# run "hcitool dev" to get the device address on the raspberry pi
 
 if devAddress == "":
     print "edit the file and configure the device address!"

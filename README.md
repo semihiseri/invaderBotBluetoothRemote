@@ -1,5 +1,7 @@
 # invaderBotBluetoothRemote
-This repo provides remote controlling solution over bluetooth SPP
+This repo provides remote controlling solution over bluetooth SPP. You can configure raspberries as servers, and controller laptops as clients.
+
+Run relevant setup file on each side and then run the actual scripts
 
 # What to do if you are getting the following error:
 Traceback (most recent call last):
